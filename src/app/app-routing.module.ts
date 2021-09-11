@@ -1,37 +1,27 @@
-import { NotFoundComponent } from './not-found/not-found.component';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 
-import { HomeComponent } from './home/home.component';
-import { CursosComponent } from './cursos/cursos.component';
-import { LoginComponent } from './login/login.component';
-import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import { HomeComponent } from "./pages/home/home.component";
+import { LoginComponent } from "./pages/login/login.component";
+import { NotFoundComponent } from "./pages/errors/not-found/not-found.component";
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: "home",
     component: HomeComponent,
   },
   {
-    path: 'login',
-    component: LoginComponent
+    path: "login",
+    component: LoginComponent,
   },
   {
-    path: 'cursos',
-    component: CursosComponent
+    path: "not-found",
+    component: NotFoundComponent,
   },
-  {
-    path: 'cursos/:id',
-    component: CursoDetalheComponent
-  },
-  {
-    path: 'not-found',
-    component: NotFoundComponent
-  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

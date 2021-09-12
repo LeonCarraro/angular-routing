@@ -7,7 +7,7 @@ import { AlunoDetailComponent } from "./aluno-detail/aluno-detail.component";
 
 const routes: Routes = [
   {
-    path: "alunos",
+    path: "",
     component: AlunosComponent,
     children: [
       {

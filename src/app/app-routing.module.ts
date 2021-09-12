@@ -7,6 +7,20 @@ import { NotFoundComponent } from "./pages/errors/not-found/not-found.component"
 
 const routes: Routes = [
   {
+    path: "cursos",
+    loadChildren: () =>
+      import("./pages/cursos/cursos.module").then(
+        (module) => module.CursosModule
+      ),
+  },
+  {
+    path: "alunos",
+    loadChildren: () =>
+      import("./pages/alunos/alunos.module").then(
+        (module) => module.AlunosModule
+      ),
+  },
+  {
     path: "home",
     component: HomeComponent,
   },

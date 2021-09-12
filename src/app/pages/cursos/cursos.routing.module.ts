@@ -6,11 +6,11 @@ import { CursoDetalheComponent } from "./curso-detalhe/curso-detalhe.component";
 
 const routes: Routes = [
   {
-    path: "cursos",
+    path: "",
     component: CursosComponent,
   },
   {
-    path: "cursos/:id",
+    path: ":id",
     component: CursoDetalheComponent,
   },
 ];

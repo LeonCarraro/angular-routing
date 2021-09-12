@@ -4,23 +4,25 @@ import { Injectable } from "@angular/core";
   providedIn: "root",
 })
 export class CursosService {
+  private cursos: any[] = [
+    {
+      id: 1,
+      nome: "Java 11",
+    },
+    {
+      id: 2,
+      nome: "Angular",
+    },
+  ];
+
   constructor() {}
 
   public getCursos(): any[] {
-    return [
-      {
-        id: 1,
-        nome: "Java 11",
-      },
-      {
-        id: 2,
-        nome: "Angular",
-      },
-    ];
+    return this.cursos;
   }
 
   public getCurso(id: number): any {
-    let curso = this.getCursos().filter((value) => value.id == id);
-    return curso.length == 0 ? null : curso[0];
+    let curso = this.getCursos().find((value) => value.id == id);
+    return curso == undefined ? null : curso;
   }
 }

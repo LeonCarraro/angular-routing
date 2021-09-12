@@ -33,6 +33,13 @@ export class AppComponent implements OnInit {
           exact: false,
         },
       },
+      {
+        label: "Alunos",
+        routerLink: "/alunos",
+        routerLinkActiveOptions: {
+          exact: false,
+        },
+      },
     ];
   }
 }

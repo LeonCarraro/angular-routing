@@ -3,6 +3,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppRoutingModule } from "./app-routing.module";
 import { MenubarModule } from "primeng/menubar";
+import { InputTextModule } from "primeng/inputtext";
+import { ButtonModule } from "primeng-lts/button";
 
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./pages/home/home.component";
@@ -21,6 +23,8 @@ import { NotFoundComponent } from "./pages/errors/not-found/not-found.component"
     BrowserAnimationsModule,
     AppRoutingModule,
     MenubarModule,
+    InputTextModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
